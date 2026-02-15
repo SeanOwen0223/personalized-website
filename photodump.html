@@ -12,6 +12,12 @@
             height: 300px;
             object-fit: cover;
             border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .photo-card a:hover img {
+            opacity: 0.9;
+            transform: scale(1.02);
         }
 
         .caption {
@@ -39,38 +45,78 @@
 
     <main class="container">
         <h1>Photo Dump</h1>
-        <p>A glimpse into the memories that made me.</p>
+        <p>A glimpse into the memories that made me. Click any photo to view it full size.</p>
 
         <div class="grid-container">
 
             <div class="card photo-card">
-                <img src="img/picture-kid.jpg" alt="Riding mini motorcycle">
+                <a href="img/picture-kid.jpg" target="photo_view">
+                    <img src="img/picture-kid.jpg" alt="Riding mini motorcycle">
+                </a>
                 <div class="caption">Start 'em young! Me cruising on my mini motorcycle.</div>
             </div>
 
             <div class="card photo-card">
-                <img src="img/picture-kid2.jpg" alt="Harry Potter Cosplay">
+                <a href="img/picture-kid2.jpg" target="photo_view">
+                    <img src="img/picture-kid2.jpg" alt="Harry Potter Cosplay">
+                </a>
                 <div class="caption">"You're a wizard, Sean." My Harry Potter cosplay era.</div>
             </div>
 
             <div class="card photo-card">
-                <img src="img/picture-kid3.jpg" alt="With Mom">
+                <a href="img/picture-kid3.jpg" target="photo_view">
+                    <img src="img/picture-kid3.jpg" alt="With Mom">
+                </a>
                 <div class="caption">Quality time with Mom.</div>
             </div>
 
             <div class="card photo-card">
-                <img src="img/picture-kid4.jpg" alt="With brother and parrot">
+                <a href="img/picture-kid4.jpg" target="photo_view">
+                    <img src="img/picture-kid4.jpg" alt="With brother and parrot">
+                </a>
                 <div class="caption">Hanging out with my brother and a parrot on my shoulder.</div>
             </div>
 
             <div class="card photo-card">
-                <img src="img/picture-kid5.jpg" alt="Waiting for food">
+                <a href="img/picture-kid5.jpg" target="photo_view">
+                    <img src="img/picture-kid5.jpg" alt="Waiting for food">
+                </a>
                 <div class="caption">The patient stare while waiting for my order.</div>
             </div>
 
             <div class="card photo-card">
-                <img src="img/picture-with-friends.jpg" alt="Coffee with friends">
+                <a href="img/picture-with-friends.jpg" target="photo_view">
+                    <img src="img/picture-with-friends.jpg" alt="Coffee with friends">
+                </a>
                 <div class="caption">Midnight coffee runs with the squad.</div>
+            </div>
+
+            <div class="card photo-card">
+                <a href="img/picture-kid7.jpg" target="photo_view">
+                    <img src="img/picture-kid7.jpg" alt="Boy Scout Uniform">
+                </a>
+                <div class="caption">Boy Scout days! Always ready.</div>
+            </div>
+
+            <div class="card photo-card">
+                <a href="img/achievement-pic.jpg" target="photo_view">
+                    <img src="img/achievement-pic.jpg" alt="Achievement Certificate">
+                </a>
+                <div class="caption">Receiving my achievement certificate. Hard work pays off!</div>
+            </div>
+
+            <div class="card photo-card">
+                <a href="img/picture-friends2.jpg" target="photo_view">
+                    <img src="img/picture-friends2.jpg" alt="Electrical Installation Project">
+                </a>
+                <div class="caption">Post-project photo: Electrical Installation strand squad.</div>
+            </div>
+
+            <div class="card photo-card">
+                <a href="img/picture-selfie2.jpg" target="photo_view">
+                    <img src="img/picture-selfie2.jpg" alt="Throwback Selfie">
+                </a>
+                <div class="caption">Just a weird angle... throwback from a couple of years ago.</div>
             </div>
 
         </div>
