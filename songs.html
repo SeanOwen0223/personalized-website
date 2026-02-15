@@ -7,6 +7,51 @@
     <title>My Playlist | Sean Owen Refolledo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .category-nav {
+            background-color: #fff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .cat-btn {
+            padding: 8px 16px;
+            background-color: #f1f2f6;
+            color: #2d3436;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cat-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .genre-section {
+            scroll-margin-top: 160px;
+            margin-bottom: 4rem;
+        }
+
+        .genre-title {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
         .album-art {
             width: 100%;
             height: 250px;
@@ -14,6 +59,24 @@
             border-radius: 8px;
             margin-bottom: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .song-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .award-badge {
+            display: inline-block;
+            background-color: #ffeaa7;
+            color: #d35400;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+            font-weight: bold;
         }
 
         audio {
@@ -29,11 +92,15 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: transform 0.2s;
         }
 
         .btn-spotify:hover {
-            background-color: #1ed760;
             transform: translateY(-2px);
+            background-color: #1ed760;
         }
     </style>
 </head>
@@ -52,84 +119,308 @@
     </nav>
 
     <main class="container">
-        <h1>My Favorite Songs</h1>
-        <p>A collection of tracks that define my current vibe.</p>
+        <h1 style="text-align: center; margin-bottom: 1rem;">My Music Collection</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">25 Tracks • Curated by Genre</p>
 
-        <div class="grid-container">
-
-            <div class="card">
-                <img src="music/cover/popular.png" alt="Popular Album Art" class="album-art">
-                <h3>Popular</h3>
-                <p><strong>Artist:</strong> Playboi Carti</p>
-                <p style="font-size: 0.9rem; color: #666;">Vibrant neon rhythm.</p>
-
-                <audio controls>
-                    <source src="music/popular.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="card">
-                <img src="music/cover/sunflower.jpg" alt="Sunflower Album Art" class="album-art">
-                <h3>Sunflower</h3>
-                <p><strong>Artist:</strong> Post Malone</p>
-                <p style="font-size: 0.9rem; color: #666;">Warm golden hour vibes.</p>
-
-                <audio controls>
-                    <source src="music/sunflower.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="card">
-                <img src="music/cover/mindagmes.jpg" alt="Mind Games Album Art" class="album-art">
-                <h3>Mind Games</h3>
-                <p><strong>Artist:</strong> Sickick</p>
-                <p style="font-size: 0.9rem; color: #666;">Dark, edgy, glitchy.</p>
-
-                <audio controls>
-                    <source src="music/mindgames.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="card">
-                <img src="music/cover/duvet.jpg" alt="Duvet Album Art" class="album-art">
-                <h3>Duvet</h3>
-                <p><strong>Artist:</strong> bôa</p>
-                <p style="font-size: 0.9rem; color: #666;">Classic alternative feel.</p>
-
-                <audio controls>
-                    <source src="music/duvet.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="card">
-                <img src="music/cover/see you again.jpg" alt="See You Again Album Art" class="album-art">
-                <h3>See You Again</h3>
-                <p><strong>Artist:</strong> Tyler, The Creator</p>
-                <p style="font-size: 0.9rem; color: #666;">Dreamy, romantic flow.</p>
-
-                <audio controls>
-                    <source src="music/see you again.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="card">
-                <img src="music/cover/congratulation.jpg" alt="Congratulations Album Art" class="album-art">
-                <h3>Congratulations</h3>
-                <p><strong>Artist:</strong> Post Malone</p>
-                <p style="font-size: 0.9rem; color: #666;">Celebratory anthem.</p>
-
-                <audio controls>
-                    <source src="music/congratulation.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
+        <div class="category-nav">
+            <a href="#main" class="cat-btn">Main Rotation</a>
+            <a href="#rnb" class="cat-btn">Late Night R&B</a>
+            <a href="#opm" class="cat-btn">Pinoy Favorites</a>
+            <a href="#pop" class="cat-btn">Smooth Pop</a>
+            <a href="#kpop" class="cat-btn">K-Pop / J-Pop</a>
         </div>
+
+        <section id="main" class="genre-section">
+            <h2 class="genre-title">🔥 Main Rotation</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="music/cover/popular.png" alt="Popular" class="album-art">
+                    <h3>Popular</h3>
+                    <p><strong>The Weeknd</strong></p>
+                    <div class="song-meta">From "The Idol Vol. 1" (2023)<br>Feat. Playboi Carti & Madonna</div>
+                    <audio controls>
+                        <source src="music/popular.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/congratulation.jpg" alt="Congratulations" class="album-art">
+                    <h3>Congratulations</h3>
+                    <p><strong>Post Malone</strong></p>
+                    <div class="song-meta">Album: Stoney (2016)<br><span class="award-badge">Diamond Certified</span>
+                    </div>
+                    <audio controls>
+                        <source src="music/congratulation.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/sunflower.jpg" alt="Sunflower" class="album-art">
+                    <h3>Sunflower</h3>
+                    <p><strong>Post Malone</strong></p>
+                    <div class="song-meta">Spider-Man: Into the Spider-Verse (2018)<br><span class="award-badge">17x
+                            Platinum</span></div>
+                    <audio controls>
+                        <source src="music/sunflower.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/see you again.jpg" alt="See You Again" class="album-art">
+                    <h3>See You Again</h3>
+                    <p><strong>Tyler, The Creator</strong></p>
+                    <div class="song-meta">Album: Flower Boy (2017)<br>Feat. Kali Uchis</div>
+                    <audio controls>
+                        <source src="music/see you again.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/mindagmes.jpg" alt="Mind Games" class="album-art">
+                    <h3>Mind Games</h3>
+                    <p><strong>Sickick</strong></p>
+                    <div class="song-meta">Single Release (2019)<br>Viral Hit</div>
+                    <audio controls>
+                        <source src="music/mindgames.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/duvet.jpg" alt="Duvet" class="album-art">
+                    <h3>Duvet</h3>
+                    <p><strong>bôa</strong></p>
+                    <div class="song-meta">Album: Twilight (1998)<br>Serial Experiments Lain OST</div>
+                    <audio controls>
+                        <source src="music/duvet.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section id="rnb" class="genre-section">
+            <h2 class="genre-title">🌙 Late Night R&B & Chill</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="music/cover/The_Weeknd_-_Die_for_You.png" alt="Die For You" class="album-art">
+                    <h3>Die For You</h3>
+                    <p><strong>The Weeknd</strong></p>
+                    <div class="song-meta">Album: Starboy (2016)<br><span class="award-badge">Billboard Hot 100
+                            #1</span></div>
+                    <audio controls>
+                        <source src="music/dieforyou.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/The_Weeknd_-_The_Hills.jpg" alt="The Hills" class="album-art">
+                    <h3>The Hills</h3>
+                    <p><strong>The Weeknd</strong></p>
+                    <div class="song-meta">Album: Beauty Behind the Madness (2015)<br><span class="award-badge">Diamond
+                            Certified</span></div>
+                    <audio controls>
+                        <source src="music/thehills.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Joji_-_Glimpse_of_Us.png" alt="Glimpse of Us" class="album-art">
+                    <h3>Glimpse of Us</h3>
+                    <p><strong>Joji</strong></p>
+                    <div class="song-meta">Album: SMITHEREENS (2022)<br>Viral Ballad</div>
+                    <audio controls>
+                        <source src="music/glimpseofus.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Slow_Dancing_in_the_Dark.jpg" alt="Slow Dancing" class="album-art">
+                    <h3>Slow Dancing in the Dark</h3>
+                    <p><strong>Joji</strong></p>
+                    <div class="song-meta">Album: BALLADS 1 (2018)<br><span class="award-badge">Double Platinum</span>
+                    </div>
+                    <audio controls>
+                        <source src="music/slowdancing.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Chase_Atlantic_Self-Titled_Album_Cover.jpg" alt="Swim" class="album-art">
+                    <h3>Swim</h3>
+                    <p><strong>Chase Atlantic</strong></p>
+                    <div class="song-meta">Album: Chase Atlantic (2017)<br>Alternative R&B</div>
+                    <audio controls>
+                        <source src="music/swim.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/D4vd_-_Romantic_Homicide.png" alt="Romantic Homicide" class="album-art">
+                    <h3>Romantic Homicide</h3>
+                    <p><strong>d4vd</strong></p>
+                    <div class="song-meta">Album: Petals to Thorns (2022)<br>Indie Alternative</div>
+                    <audio controls>
+                        <source src="music/romantichomicide.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/SZA_-_S.O.S.png" alt="Snooze" class="album-art">
+                    <h3>Snooze</h3>
+                    <p><strong>SZA</strong></p>
+                    <div class="song-meta">Album: SOS (2022)<br><span class="award-badge">Grammy Winner</span></div>
+                    <audio controls>
+                        <source src="music/snooze.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="opm" class="genre-section">
+            <h2 class="genre-title">🇵🇭 Pinoy Favorites (OPM)</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="music/cover/Pagtingincoverart.jpg" alt="Pagtingin" class="album-art">
+                    <h3>Pagtingin</h3>
+                    <p><strong>Ben&Ben</strong></p>
+                    <div class="song-meta">Album: Limasawa Street (2019)<br>Soul/Pop</div>
+                    <audio controls>
+                        <source src="music/pagtingin.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Pano_Zack_Tabudlo.png" alt="Pano" class="album-art">
+                    <h3>Pano</h3>
+                    <p><strong>Zack Tabudlo</strong></p>
+                    <div class="song-meta">Album: Episode (2021)<br><span class="award-badge">Global Viral Hit</span>
+                    </div>
+                    <audio controls>
+                        <source src="music/pano.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Lola Amour _ Fallen_Cover_Art.jpg" alt="Fallen" class="album-art">
+                    <h3>Fallen</h3>
+                    <p><strong>Lola Amour</strong></p>
+                    <div class="song-meta">Single Release (2021)<br>Pop/Brass</div>
+                    <audio controls>
+                        <source src="music/fallen.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Sining_(cover).jpeg" alt="Sining" class="album-art">
+                    <h3>sining</h3>
+                    <p><strong>Dionela</strong></p>
+                    <div class="song-meta">Feat. Jay R (2024)<br>New Release</div>
+                    <audio controls>
+                        <source src="music/sining.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Cup_of_Joe_Tingin_Cover_Art.jpg" alt="Tingin" class="album-art">
+                    <h3>Tingin</h3>
+                    <p><strong>Cup of Joe</strong></p>
+                    <div class="song-meta">Feat. Janine Teñoso (2023)<br>Pop Ballad</div>
+                    <audio controls>
+                        <source src="music/tingin.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pop" class="genre-section">
+            <h2 class="genre-title">🎷 Smooth Pop & Indie</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="music/cover/Bruno_Mars_-_Locked_Out_of_Heaven.jpg" alt="Locked Out" class="album-art">
+                    <h3>Locked Out of Heaven</h3>
+                    <p><strong>Bruno Mars</strong></p>
+                    <div class="song-meta">Album: Unorthodox Jukebox (2012)<br><span class="award-badge">Diamond
+                            Certified</span></div>
+                    <audio controls>
+                        <source src="music/lockedoutofheaven.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/From_the_Start_Vinyl_Cover.webp" alt="From The Start" class="album-art">
+                    <h3>From The Start</h3>
+                    <p><strong>Laufey</strong></p>
+                    <div class="song-meta">Album: Bewitched (2023)<br>Jazz Pop</div>
+                    <audio controls>
+                        <source src="music/fromthestart.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Every_Summertime_Niki_Cover.jpeg" alt="Every Summertime" class="album-art">
+                    <h3>Every Summertime</h3>
+                    <p><strong>NIKI</strong></p>
+                    <div class="song-meta">Shang-Chi OST (2021)<br>Retro Soul</div>
+                    <audio controls>
+                        <source src="music/everysummertime.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/SundayMorning.jpg" alt="Sunday Morning" class="album-art">
+                    <h3>Sunday Morning</h3>
+                    <p><strong>Maroon 5</strong></p>
+                    <div class="song-meta">Album: Songs About Jane (2002)<br>Classic Pop</div>
+                    <audio controls>
+                        <source src="music/sundaymorning.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="kpop" class="genre-section">
+            <h2 class="genre-title">✨ K-Pop & J-Pop Hits</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="music/cover/New_Jeans_(EP).jpg" alt="Hype Boy" class="album-art">
+                    <h3>Hype Boy</h3>
+                    <p><strong>NewJeans</strong></p>
+                    <div class="song-meta">Album: New Jeans (2022)<br>K-Pop Phenomenon</div>
+                    <audio controls>
+                        <source src="music/hypeboy.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/NewJeans_-_How_Sweet.png" alt="How Sweet" class="album-art">
+                    <h3>How Sweet</h3>
+                    <p><strong>NewJeans</strong></p>
+                    <div class="song-meta">Single Release (2024)<br>Bubblegum Pop</div>
+                    <audio controls>
+                        <source src="music/howsweet.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="card">
+                    <img src="music/cover/Le_Sserafim_-_Unforgiven.png" alt="Unforgiven" class="album-art">
+                    <h3>UNFORGIVEN</h3>
+                    <p><strong>LE SSERAFIM</strong></p>
+                    <div class="song-meta">Album: Unforgiven (2023)<br>Feat. Nile Rodgers</div>
+                    <audio controls>
+                        <source src="music/unforgiven.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+        </section>
+
 
         <div
             style="margin-top: 4rem; text-align: center; padding: 2rem; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
