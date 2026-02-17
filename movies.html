@@ -7,6 +7,28 @@
     <title>Favorite Movies | Sean Owen Refolledo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .media-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .media-btn {
+            padding: 10px 20px;
+            background-color: #2d3436;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .media-btn:hover {
+            background-color: var(--primary-color);
+        }
+
         .category-nav {
             background-color: #fff;
             padding: 1rem;
@@ -74,7 +96,6 @@
             transition: transform 0.2s;
         }
 
-        /* Hover effect for clickable images */
         a:hover .movie-poster {
             transform: scale(1.02);
             opacity: 0.95;
@@ -122,9 +143,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="biography.html">Bio</a></li>
-            <li><a href="songs.html">Songs</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="tvshows.html">TV Shows</a></li>
+            <li><a href="media.html">Media</a></li>
             <li><a href="photodump.html">Photos</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -132,6 +151,13 @@
 
     <main class="container">
         <h1 style="text-align: center; margin-bottom: 1rem;">My Favorite Movies</h1>
+
+        <!-- NEW QUICK SWITCH BUTTONS -->
+        <div class="media-switch">
+            <a href="songs.html" class="media-btn">🎵 Switch to Songs</a>
+            <a href="tvshows.html" class="media-btn">📺 Switch to TV Shows</a>
+        </div>
+
         <p style="text-align: center; color: #666; margin-bottom: 2rem;">A curated list of films that I love.</p>
 
         <div class="category-nav">
