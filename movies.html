@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Movies | Sean Owen Refolledo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .category-nav {
+            background-color: #fff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .cat-btn {
+            padding: 8px 16px;
+            background-color: #f1f2f6;
+            color: #2d3436;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cat-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .genre-section {
+            scroll-margin-top: 160px;
+            margin-bottom: 4rem;
+        }
+
+        .genre-title {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .movie-poster {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        /* Hover effect for clickable images */
+        a:hover .movie-poster {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+
+        .movie-info {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .movie-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-brand">Sean Owen Refolledo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Bio</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="tvshows.html">TV Shows</a></li>
+            <li><a href="photodump.html">Photos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 style="text-align: center; margin-bottom: 1rem;">My Favorite Movies</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">A curated list of films that I love.</p>
+
+        <div class="category-nav">
+            <a href="#action" class="cat-btn">Action</a>
+            <a href="#animation" class="cat-btn">Animation</a>
+            <a href="#scifi" class="cat-btn">Sci-Fi</a>
+            <a href="#horror" class="cat-btn">Horror</a>
+        </div>
+
+        <section id="action" class="genre-section">
+            <h2 class="genre-title">💥 Action</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/johnwick1.jpg" target="photo_view">
+                        <img src="img/johnwick1.jpg" alt="John Wick Poster" class="movie-poster">
+                    </a>
+                    <h3>John Wick</h3>
+                    <div class="movie-meta">Dir. Chad Stahelski • Star: Keanu Reeves</div>
+                    <p class="movie-info">
+                        An ex-hitman comes out of retirement to track down the gangsters that killed his dog and took
+                        everything from him.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/C0BMx-qxsP4" title="John Wick Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/johnwick2.jpg" target="photo_view">
+                        <img src="img/johnwick2.jpg" alt="John Wick 2 Poster" class="movie-poster">
+                    </a>
+                    <h3>John Wick: Chapter 2</h3>
+                    <div class="movie-meta">Dir. Chad Stahelski • Star: Keanu Reeves</div>
+                    <p class="movie-info">
+                        After returning to the criminal underworld to repay a debt, John Wick discovers that a large
+                        bounty has been put on his life.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ChpLV9AMqm4" title="John Wick 2 Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/johnwick3.jpg" target="photo_view">
+                        <img src="img/johnwick3.jpg" alt="John Wick 3 Poster" class="movie-poster">
+                    </a>
+                    <h3>John Wick: Parabellum</h3>
+                    <div class="movie-meta">Dir. Chad Stahelski • Star: Keanu Reeves</div>
+                    <p class="movie-info">
+                        John Wick is on the run after killing a member of the international assassins' guild, and with a
+                        $14 million price tag on his head, he is the target of hit men and women everywhere.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/M7XM597XO94" title="John Wick 3 Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="animation" class="genre-section">
+            <h2 class="genre-title">🐉 Animation</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/htyd1.jpg" target="photo_view">
+                        <img src="img/htyd1.jpg" alt="HTYD 1 Poster" class="movie-poster">
+                    </a>
+                    <h3>How to Train Your Dragon</h3>
+                    <div class="movie-meta">Dir. Dean DeBlois • Star: Jay Baruchel</div>
+                    <p class="movie-info">
+                        A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon
+                        himself, and learns there may be more to the creatures than he assumed.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/oKiYuIsPxYk" title="HTYD Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/htyd2.jpg" target="photo_view">
+                        <img src="img/htyd2.jpg" alt="HTYD 2 Poster" class="movie-poster">
+                    </a>
+                    <h3>How to Train Your Dragon 2</h3>
+                    <div class="movie-meta">Dir. Dean DeBlois • Star: Jay Baruchel</div>
+                    <p class="movie-info">
+                        When Hiccup and Toothless discover an ice cave that is home to hundreds of new wild dragons and
+                        the mysterious Dragon Rider, the two friends find themselves at the center of a battle to
+                        protect the peace.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2BP38770KNo" title="HTYD 2 Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/htyd3.jpg" target="photo_view">
+                        <img src="img/htyd3.jpg" alt="HTYD 3 Poster" class="movie-poster">
+                    </a>
+                    <h3>The Hidden World</h3>
+                    <div class="movie-meta">Dir. Dean DeBlois • Star: Jay Baruchel</div>
+                    <p class="movie-info">
+                        When Hiccup discovers Toothless isn't the only Night Fury, he must seek "The Hidden World", a
+                        secret Dragon Utopia before a hired tyrant named Grimmel finds it first.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/SkcucKDrbOI" title="HTYD 3 Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="scifi" class="genre-section">
+            <h2 class="genre-title">🚀 Sci-Fi</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/interstellar.jpg" target="photo_view">
+                        <img src="img/interstellar.jpg" alt="Interstellar Poster" class="movie-poster">
+                    </a>
+                    <h3>Interstellar</h3>
+                    <div class="movie-meta">Dir. Christopher Nolan • Star: Matthew McConaughey</div>
+                    <p class="movie-info">
+                        When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is
+                        tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/spiderverse.png" target="photo_view">
+                        <img src="img/spiderverse.png" alt="Spider-Man: Into the Spider-Verse Poster"
+                            class="movie-poster">
+                    </a>
+                    <h3>Spider-Man: Into the Spider-Verse</h3>
+                    <div class="movie-meta">Dir. Bob Persichetti, Peter Ramsey, Rodney Rothman</div>
+                    <p class="movie-info">
+                        Teen Miles Morales becomes the Spider-Man of his universe, and must join with five
+                        spider-powered individuals from other dimensions to stop a threat for all realities.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/g4Hbz2jLxvQ"
+                            title="Spider-Man: Into the Spider-Verse Trailer" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/infinity.jpg" target="photo_view">
+                        <img src="img/infinity.jpg" alt="Avengers: Infinity War Poster" class="movie-poster">
+                    </a>
+                    <h3>Avengers: Infinity War</h3>
+                    <div class="movie-meta">Dir. Anthony Russo, Joe Russo</div>
+                    <p class="movie-info">
+                        The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the
+                        powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="Avengers: Infinity War Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="horror" class="genre-section">
+            <h2 class="genre-title">👻 Horror</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/insidious.jpg" target="photo_view">
+                        <img src="img/insidious.jpg" alt="Insidious Poster" class="movie-poster">
+                    </a>
+                    <h3>Insidious</h3>
+                    <div class="movie-meta">Dir. James Wan • Star: Patrick Wilson</div>
+                    <p class="movie-info">
+                        Parents take drastic measures when it seems their new home is haunted and their comatose son is
+                        possessed by a malevolent entity.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/zuZnRUcoWos" title="Insidious Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/sawx.jpg" target="photo_view">
+                        <img src="img/sawx.jpg" alt="Saw X Poster" class="movie-poster">
+                    </a>
+                    <h3>Saw X</h3>
+                    <div class="movie-meta">Dir. Kevin Greutert • Star: Tobin Bell</div>
+                    <p class="movie-info">
+                        A sick and desperate John Kramer travels to Mexico for a risky medical procedure, only to
+                        discover the whole operation is a scam to defraud the most vulnerable.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/t3PzUo4P21c" title="Saw X Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/thenun.jpg" target="photo_view">
+                        <img src="img/thenun.jpg" alt="The Nun Poster" class="movie-poster">
+                    </a>
+                    <h3>The Nun</h3>
+                    <div class="movie-meta">Dir. Corin Hardy • Star: Taissa Farmiga</div>
+                    <p class="movie-info">
+                        A priest with a haunted past and a novice on the threshold of her final vows are sent by the
+                        Vatican to investigate the death of a young nun in Romania.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/pzD9zGcUNrw" title="The Nun Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sean Owen Refolledo.</p>
+    </footer>
+
+</body>
+
+</html>

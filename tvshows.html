@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite TV Shows | Sean Owen Refolledo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .category-nav {
+            background-color: #fff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .cat-btn {
+            padding: 8px 16px;
+            background-color: #f1f2f6;
+            color: #2d3436;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cat-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .genre-section {
+            scroll-margin-top: 160px;
+            margin-bottom: 4rem;
+        }
+
+        .genre-title {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .poster-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        /* Hover effect to show it's clickable */
+        a:hover .poster-img {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+
+        .show-info {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .show-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-brand">Sean Owen Refolledo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Bio</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="tvshows.html">TV Shows</a></li>
+            <li><a href="photodump.html">Photos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 style="text-align: center; margin-bottom: 1rem;">My TV Show List</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">A mix of Western hits and Anime favorites.</p>
+
+        <div class="category-nav">
+            <a href="#western" class="cat-btn">Western Series</a>
+            <a href="#fantasy" class="cat-btn">Anime: Fantasy</a>
+            <a href="#scifi" class="cat-btn">Anime: Sci-Fi & Action</a>
+        </div>
+
+        <section id="western" class="genre-section">
+            <h2 class="genre-title">📺 Western Favorites</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/got.jpg" target="photo_view">
+                        <img src="img/got.jpg" alt="Game of Thrones" class="poster-img">
+                    </a>
+                    <h3>Game of Thrones</h3>
+                    <div class="show-meta">HBO • Fantasy Drama</div>
+                    <p class="show-info">
+                        Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns
+                        after being dormant for millennia.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KPLWWIOCOOQ" title="Game of Thrones Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/rickandmorty.jpg" target="photo_view">
+                        <img src="img/rickandmorty.jpg" alt="Rick and Morty" class="poster-img">
+                    </a>
+                    <h3>Rick and Morty</h3>
+                    <div class="show-meta">Adult Swim • Sci-Fi Comedy</div>
+                    <p class="show-info">
+                        An animated series that follows the exploits of a super scientist and his not-so-bright
+                        grandson.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/hl1U0bxTHbY" title="Rick and Morty Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/fionaandcake.jpg" target="photo_view">
+                        <img src="img/fionaandcake.jpg" alt="Fionna and Cake" class="poster-img">
+                    </a>
+                    <h3>Adventure Time: Fionna and Cake</h3>
+                    <div class="show-meta">Max • Fantasy Animation</div>
+                    <p class="show-info">
+                        Fionna and Cake – with the help of the former Ice King, Simon Petrikov – embark on a
+                        multiverse-hopping adventure and journey of self-discovery.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/uSbyC1A9KHk" title="Fionna and Cake Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="fantasy" class="genre-section">
+            <h2 class="genre-title">⚔️ Anime: Fantasy & Adventure</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/tensura.jpg" target="photo_view">
+                        <img src="img/tensura.jpg" alt="That Time I Got Reincarnated as a Slime" class="poster-img">
+                    </a>
+                    <h3>That Time I Got Reincarnated as a Slime</h3>
+                    <div class="show-meta">Studio 8bit • Isekai</div>
+                    <p class="show-info">
+                        Average 37-year-old Minami Satoru dies and is reincarnated as the most unremarkable creature
+                        imaginable—a slime.
+                    </p>
+                    <div class="video-container">
+                        <iframe width="1122" height="631" src="https://www.youtube.com/embed/qE27ziji4Wc"
+                            title="That Time I Got Reincarnated as a Slime Season 4 - Official Trailer" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/blackclover.jpg" target="photo_view">
+                        <img src="img/blackclover.jpg" alt="Black Clover" class="poster-img">
+                    </a>
+                    <h3>Black Clover</h3>
+                    <div class="show-meta">Studio Pierrot • Shonen</div>
+                    <p class="show-info">
+                        Asta and Yuno were abandoned together at the same church and have been inseparable since. As
+                        children, they promised that they would compete against each other to see who would become the
+                        next Emperor Magus.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/BwdMT-OiARI" title="Black Clover Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="scifi" class="genre-section">
+            <h2 class="genre-title">🤖 Anime: Sci-Fi & Action</h2>
+            <div class="grid-container">
+
+                <div class="card">
+                    <a href="img/86.jpg" target="photo_view">
+                        <img src="img/86.jpg" alt="86 EIGHTY-SIX" class="poster-img">
+                    </a>
+                    <h3>86 EIGHTY-SIX</h3>
+                    <div class="show-meta">A-1 Pictures • Mecha/Drama</div>
+                    <p class="show-info">
+                        The Republic of San Magnolia has long been under attack from the neighboring Giad Empire's army
+                        of unmanned drones known as the Legion.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Mb5ESlC3FNc" title="86 Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/eva.jpg" target="photo_view">
+                        <img src="img/eva.jpg" alt="Neon Genesis Evangelion" class="poster-img">
+                    </a>
+                    <h3>Neon Genesis Evangelion</h3>
+                    <div class="show-meta">Gainax • Mecha/Psychological</div>
+                    <p class="show-info">
+                        A teenage boy finds himself recruited as a member of an elite team of pilots by his father.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/13nSISwxrY4" title="Evangelion Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="img/dmc.jpg" target="photo_view">
+                        <img src="img/dmc.jpg" alt="Devil May Cry" class="poster-img">
+                    </a>
+                    <h3>Devil May Cry</h3>
+                    <div class="show-meta">Netflix • Action</div>
+                    <p class="show-info">
+                        Dark forces are at play and a young Dante uncovers a conspiracy that leads him to embrace his
+                        demonic powers.
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OlEqHXRrcpc" title="Devil May Cry Trailer"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sean Owen Refolledo.</p>
+    </footer>
+
+</body>
+
+</html>
