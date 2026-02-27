@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List | Sean Owen Refolledo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bucket-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .bucket-list li {
+            background-color: #f8f9fa;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s, background-color 0.2s;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .bucket-list li:hover {
+            transform: translateX(5px);
+            background-color: #f1f2f6;
+        }
+
+        .check-icon {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .bucket-category {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-brand">Sean Owen Refolledo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Bio</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="photodump.html">Photos</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="bucketlist.html" style="color: var(--primary-color); font-weight: bold;">Bucket List</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; color: #2c3e50;">My Ultimate Bucket List</h1>
+            <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">A collection of my biggest
+                dreams, travel goals, and personal milestones I want to achieve in this lifetime.</p>
+        </header>
+
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+
+            <div class="card">
+                <h2 class="bucket-category">✈️ Travel & Exploration</h2>
+                <ul class="bucket-list">
+                    <li><span class="check-icon">⬜</span> Explore the neon streets of Tokyo, Japan</li>
+                    <li><span class="check-icon">⬜</span> Relax on the white sands of Boracay, Philippines</li>
+                    <li><span class="check-icon">⬜</span> Walk the historic steps of the Great Wall of China</li>
+                    <li><span class="check-icon">⬜</span> Visit the legendary T1 Tower in Seoul, South Korea</li>
+                    <li><span class="check-icon">⬜</span> See the Eiffel Tower sparkle at night in Paris, France</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="bucket-category">🎓 Academic & Career</h2>
+                <ul class="bucket-list">
+                    <li><span class="check-icon">⬜</span> Graduate college from UE without being an irregular student
+                    </li>
+                    <li><span class="check-icon">⬜</span> Master full-stack web development</li>
+                    <li><span class="check-icon">⬜</span> Land my first major role as an IT professional</li>
+                    <li><span class="check-icon">⬜</span> Build a fully functioning web application from scratch</li>
+                    <li><span class="check-icon">⬜</span> Earn my first 6-figure salary in the tech industry</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="bucket-category">🎮 Gaming & Tech</h2>
+                <ul class="bucket-list">
+                    <li><span class="check-icon">⬜</span> Reach Challenger rank in League of Legends</li>
+                    <li><span class="check-icon">⬜</span> Build a high-end, custom liquid-cooled gaming PC</li>
+                    <li><span class="check-icon">⬜</span> Watch the League of Legends World Championship live in a
+                        stadium</li>
+                    <li><span class="check-icon">⬜</span> Own a complete setup with multiple high-refresh-rate monitors
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="bucket-category">🌟 Personal Growth & Fun</h2>
+                <ul class="bucket-list">
+                    <li><span class="check-icon">⬜</span> Learn conversational Japanese</li>
+                    <li><span class="check-icon">⬜</span> Start a tech and gaming blog or YouTube channel</li>
+                    <li><span class="check-icon">⬜</span> Treat my parents to an all-expenses-paid vacation</li>
+                    <li><span class="check-icon">⬜</span> Try an extreme sport like skydiving or bungee jumping</li>
+                    <li><span class="check-icon">⬜</span> Attend a massive live music festival</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sean Owen Refolledo.</p>
+    </footer>
+
+    <a href="#" class="back-to-top">↑ Top</a>
+</body>
+
+</html>
